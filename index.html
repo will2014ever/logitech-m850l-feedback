@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logitech M850L & M840L — Live Feedback Tracker</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #22263a;
+      --border: #2e3250;
+      --accent: #00a8e8;
+      --accent2: #7c3aed;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --text: #e2e8f0;
+      --muted: #8892a4;
+      --card-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #0d1b2e 0%, #12203d 60%, #1a1040 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 24px 28px;
+    }
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+    .badge-live { background: rgba(34,197,94,.15); color: var(--green); border: 1px solid rgba(34,197,94,.3); }
+    .badge-prelaunch { background: rgba(245,158,11,.12); color: var(--yellow); border: 1px solid rgba(245,158,11,.3); }
+    .badge-cn { background: rgba(0,168,232,.12); color: var(--accent); border: 1px solid rgba(0,168,232,.3); }
+    h1 { font-size: clamp(22px,4vw,36px); font-weight: 700; color: #fff; letter-spacing: -.02em; margin-bottom: 8px; }
+    h1 span { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 15px; max-width: 600px; }
+    .meta-row {
+      display: flex;
+      gap: 24px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .meta-item { font-size: 13px; color: var(--muted); }
+    .meta-item strong { color: var(--text); }
+    .pulse { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); margin-right: 6px; animation: pulse 2s infinite; vertical-align: middle; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.85)} }
+
+    /* Nav tabs */
+    .nav-tabs {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-tabs-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+    }
+    .nav-tab {
+      padding: 14px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: all .2s;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+    .nav-tab:hover { color: var(--text); }
+    .nav-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* Main layout */
+    .main { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+    .section { margin-bottom: 48px; }
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::after { content:''; flex:1; height:1px; background: var(--border); }
+
+    /* Stats grid */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 16px; }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: var(--card-shadow);
+      transition: border-color .2s;
+    }
+    .stat-card:hover { border-color: var(--accent); }
+    .stat-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 8px; }
+    .stat-value { font-size: 28px; font-weight: 700; color: #fff; }
+    .stat-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+    /* Sentiment bar */
+    .sentiment-bar-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .sentiment-bar-track { height: 8px; background: var(--surface2); border-radius: 4px; margin: 12px 0 8px; position: relative; overflow: hidden; }
+    .sentiment-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg,var(--red),var(--yellow),var(--green)); transition: width .8s ease; }
+    .sentiment-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); }
+
+    /* Review cards */
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(340px,1fr)); gap: 20px; }
+    .review-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: border-color .2s, transform .2s;
+    }
+    .review-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .review-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .review-source { font-weight: 600; font-size: 15px; color: #fff; }
+    .review-date { font-size: 12px; color: var(--muted); }
+    .review-model-badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: rgba(0,168,232,.12);
+      color: var(--accent);
+      border: 1px solid rgba(0,168,232,.25);
+    }
+    .review-rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--yellow);
+    }
+    .review-rating span { font-size: 13px; color: var(--muted); font-weight: 400; }
+    .review-verdict { font-size: 13px; color: var(--muted); font-style: italic; border-left: 3px solid var(--border); padding-left: 12px; }
+    .review-quote { font-size: 13px; color: var(--text); background: var(--surface2); border-radius: 8px; padding: 10px 14px; }
+    .review-quote::before { content: '"'; color: var(--accent); font-size: 20px; line-height: 0; vertical-align: -4px; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .pros, .cons { font-size: 12px; }
+    .pros-title { color: var(--green); font-weight: 600; font-size: 11px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; }
+    .cons-title { color: var(--red); font-weight: 600; font-size: 11px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; }
+    .pros li, .cons li { margin-bottom: 4px; color: var(--muted); padding-left: 12px; position: relative; list-style: none; }
+    .pros li::before { content: '+'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+    .cons li::before { content: '−'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+    .review-link { font-size: 12px; color: var(--accent); text-decoration: none; }
+    .review-link:hover { text-decoration: underline; }
+    .region-tag { font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .region-cn { background: rgba(239,68,68,.1); color: #f87171; }
+    .region-global { background: rgba(124,58,237,.1); color: #a78bfa; }
+
+    /* Empty state */
+    .empty-card {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      padding: 48px 24px;
+      text-align: center;
+      color: var(--muted);
+      grid-column: 1/-1;
+    }
+    .empty-card .empty-icon { font-size: 40px; margin-bottom: 12px; }
+    .empty-card p { max-width: 360px; margin: 0 auto; font-size: 14px; }
+
+    /* Themes */
+    .themes-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 16px; }
+    .theme-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .theme-card-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; }
+    .theme-green .theme-card-title { color: var(--green); }
+    .theme-red .theme-card-title { color: var(--red); }
+    .theme-yellow .theme-card-title { color: var(--yellow); }
+    .theme-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .theme-list li { font-size: 13px; color: var(--text); display: flex; align-items: flex-start; gap: 8px; }
+    .theme-list li::before { flex-shrink: 0; margin-top: 2px; }
+    .theme-green .theme-list li::before { content: '✓'; color: var(--green); font-weight: 700; }
+    .theme-red .theme-list li::before { content: '!'; color: var(--red); font-weight: 700; }
+    .theme-yellow .theme-list li::before { content: '?'; color: var(--yellow); font-weight: 700; }
+
+    /* Spec table */
+    .spec-table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th { background: var(--surface2); color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: var(--surface2); }
+    td:first-child { color: var(--muted); font-weight: 500; width: 180px; }
+
+    /* Update timeline */
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .timeline-item { display: flex; gap: 16px; padding-bottom: 24px; position: relative; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 30px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline-item:last-child::before { display: none; }
+    .timeline-dot {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 2px solid var(--accent);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      z-index: 1;
+    }
+    .timeline-content { flex: 1; padding-top: 4px; }
+    .timeline-date { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .timeline-title { font-weight: 600; color: #fff; font-size: 14px; margin-bottom: 6px; }
+    .timeline-body { font-size: 13px; color: var(--muted); }
+    .timeline-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .chip { font-size: 11px; padding: 2px 8px; border-radius: 6px; background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+
+    /* Monitor targets */
+    .monitor-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap: 12px; }
+    .monitor-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+    .monitor-name { font-weight: 600; font-size: 13px; }
+    .monitor-priority { font-size: 11px; font-weight: 600; }
+    .priority-high { color: var(--green); }
+    .priority-medium { color: var(--yellow); }
+    .monitor-link { font-size: 11px; color: var(--accent); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 48px;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* Tab panels */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .pros-cons { grid-template-columns: 1fr; }
+      .meta-row { gap: 12px; }
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="badge-row">
+      <span class="badge badge-live"><span class="pulse"></span>Live Tracker</span>
+      <span class="badge badge-prelaunch" id="status-badge">Pre-Launch</span>
+      <span class="badge badge-cn">Amazon · JD.com · Taobao · Reddit</span>
+    </div>
+    <h1>Logitech <span>M850L</span> & M840L<br>User Feedback Tracker</h1>
+    <p class="subtitle">Aggregating reviews from global e-commerce platforms and media — updated every Tuesday & Friday.</p>
+    <div class="meta-row">
+      <div class="meta-item">Last updated: <strong id="last-updated">—</strong></div>
+      <div class="meta-item">Next update: <strong id="next-update">—</strong></div>
+      <div class="meta-item">Schedule: <strong>Tuesday & Friday</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV TABS -->
+<div class="nav-tabs">
+  <div class="nav-tabs-inner">
+    <button class="nav-tab active" data-tab="overview">Overview</button>
+    <button class="nav-tab" data-tab="media">Media Reviews</button>
+    <button class="nav-tab" data-tab="users">User Reviews</button>
+    <button class="nav-tab" data-tab="themes">Key Themes</button>
+    <button class="nav-tab" data-tab="specs">Specs</button>
+    <button class="nav-tab" data-tab="updates">Update Log</button>
+    <button class="nav-tab" data-tab="monitor">Monitoring</button>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- OVERVIEW TAB -->
+  <div class="tab-panel active" id="tab-overview">
+    <div class="section">
+      <div class="section-title">At a Glance</div>
+      <div class="stats-grid" id="stats-grid">
+        <!-- injected by JS -->
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Overall Sentiment</div>
+      <div class="sentiment-bar-wrap">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-size:13px;color:var(--muted);">Media sentiment score</div>
+            <div style="font-size:32px;font-weight:700;color:#fff;margin-top:4px;" id="sentiment-score">—</div>
+          </div>
+          <div style="text-align:right;font-size:13px;color:var(--muted);" id="sentiment-label">—</div>
+        </div>
+        <div class="sentiment-bar-track">
+          <div class="sentiment-bar-fill" id="sentiment-bar" style="width:0%"></div>
+        </div>
+        <div class="sentiment-labels"><span>Negative</span><span>Neutral</span><span>Positive</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Strengths & Concerns</div>
+      <div class="themes-grid" id="overview-themes"></div>
+    </div>
+  </div>
+
+  <!-- MEDIA REVIEWS TAB -->
+  <div class="tab-panel" id="tab-media">
+    <div class="section">
+      <div class="section-title">Media & Press Reviews</div>
+      <div class="reviews-grid" id="media-reviews-grid"></div>
+    </div>
+  </div>
+
+  <!-- USER REVIEWS TAB -->
+  <div class="tab-panel" id="tab-users">
+    <div class="section">
+      <div class="section-title">Amazon · JD.com · Taobao · Reddit · 什么值得买</div>
+      <div class="reviews-grid" id="user-reviews-grid"></div>
+    </div>
+  </div>
+
+  <!-- THEMES TAB -->
+  <div class="tab-panel" id="tab-themes">
+    <div class="section">
+      <div class="section-title">Key Themes</div>
+      <div class="themes-grid" id="themes-grid"></div>
+    </div>
+  </div>
+
+  <!-- SPECS TAB -->
+  <div class="tab-panel" id="tab-specs">
+    <div class="section">
+      <div class="section-title">Product Specifications</div>
+      <div class="spec-table-wrap">
+        <table id="spec-table"></table>
+      </div>
+    </div>
+  </div>
+
+  <!-- UPDATE LOG TAB -->
+  <div class="tab-panel" id="tab-updates">
+    <div class="section">
+      <div class="section-title">Update History</div>
+      <div class="timeline" id="update-timeline"></div>
+    </div>
+  </div>
+
+  <!-- MONITORING TAB -->
+  <div class="tab-panel" id="tab-monitor">
+    <div class="section">
+      <div class="section-title">Monitored Platforms</div>
+      <div class="monitor-grid" id="monitor-grid"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Data sourced from Amazon, JD.com, Taobao, Reddit, 什么值得买, and press media. Updated every Tuesday & Friday.</p>
+  <p style="margin-top:6px;">
+    <a href="https://github.com/will2014ever/logitech-m850l-feedback" target="_blank">View on GitHub</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.logitech.com/en-us/shop/p/signature-comfort-plus-m850l" target="_blank">Logitech M850L Official</a>
+  </p>
+</footer>
+
+<script>
+  // Tab switching
+  document.querySelectorAll('.nav-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Fetch data and render
+  fetch('data.json?v=' + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      renderMeta(data);
+      renderStats(data);
+      renderSentiment(data);
+      renderOverviewThemes(data);
+      renderMediaReviews(data);
+      renderUserReviews(data);
+      renderThemes(data);
+      renderSpecs(data);
+      renderTimeline(data);
+      renderMonitor(data);
+    })
+    .catch(e => console.error('Failed to load data.json', e));
+
+  function renderMeta(d) {
+    document.getElementById('last-updated').textContent = d.meta.last_updated;
+    document.getElementById('next-update').textContent = d.meta.next_update;
+    if (d.meta.status === 'post-launch') {
+      document.getElementById('status-badge').textContent = 'Live Reviews';
+      document.getElementById('status-badge').classList.remove('badge-prelaunch');
+      document.getElementById('status-badge').classList.add('badge-live');
+    } else {
+      document.getElementById('status-badge').textContent = 'Pre-Launch';
+    }
+  }
+
+  function renderStats(d) {
+    const g = document.getElementById('stats-grid');
+    const cards = [
+      { label: 'User Reviews', value: d.meta.total_reviews, sub: 'across all platforms' },
+      { label: 'Media Sources', value: d.meta.total_media_sources, sub: 'press & tech media' },
+      { label: 'Sentiment Score', value: d.meta.sentiment_score + '/10', sub: d.meta.overall_sentiment },
+      { label: 'Update Frequency', value: '2×/week', sub: 'Tue & Fri' },
+      { label: 'Platforms Tracked', value: d.monitoring_targets.length, sub: 'global & CN' },
+      { label: 'Launch Date', value: 'June 2026', sub: 'shipping globally' },
+    ];
+    g.innerHTML = cards.map(c => `
+      <div class="stat-card">
+        <div class="stat-label">${c.label}</div>
+        <div class="stat-value">${c.value}</div>
+        <div class="stat-sub">${c.sub}</div>
+      </div>
+    `).join('');
+  }
+
+  function renderSentiment(d) {
+    const score = d.meta.sentiment_score;
+    const pct = (score / 10 * 100).toFixed(0);
+    document.getElementById('sentiment-score').textContent = score + ' / 10';
+    document.getElementById('sentiment-bar').style.width = pct + '%';
+    document.getElementById('sentiment-label').innerHTML = `Based on ${d.meta.total_media_sources} media sources<br><span style="color:var(--text);font-weight:600;font-size:18px;text-transform:capitalize">${d.meta.overall_sentiment}</span>`;
+  }
+
+  function renderOverviewThemes(d) {
+    const g = document.getElementById('overview-themes');
+    g.innerHTML = `
+      <div class="theme-card theme-green">
+        <div class="theme-card-title">✓ Top Strengths</div>
+        <ul class="theme-list">${d.key_themes.strengths.slice(0,4).map(s=>`<li>${s}</li>`).join('')}</ul>
+      </div>
+      <div class="theme-card theme-red">
+        <div class="theme-card-title">! Key Concerns</div>
+        <ul class="theme-list">${d.key_themes.weaknesses.slice(0,4).map(s=>`<li>${s}</li>`).join('')}</ul>
+      </div>
+    `;
+  }
+
+  function renderReviewCard(r) {
+    const regionTag = r.region === 'cn'
+      ? `<span class="region-tag region-cn">中文</span>`
+      : r.region === 'us'
+      ? `<span class="region-tag region-global">US</span>`
+      : `<span class="region-tag region-global">Global</span>`;
+
+    const ratingHtml = r.rating
+      ? `<div class="review-rating">${r.rating}<span>/ ${r.rating_max || 10}</span></div>`
+      : '';
+
+    const quoteHtml = r.quote
+      ? `<div class="review-quote">${r.quote}</div>`
+      : '';
+
+    const prosHtml = r.pros && r.pros.length
+      ? `<div class="pros"><div class="pros-title">Positives</div><ul>${r.pros.map(p=>`<li>${p}</li>`).join('')}</ul></div>`
+      : '';
+
+    const consHtml = r.cons && r.cons.length
+      ? `<div class="cons"><div class="cons-title">Concerns</div><ul>${r.cons.map(c=>`<li>${c}</li>`).join('')}</ul></div>`
+      : '';
+
+    return `
+      <div class="review-card">
+        <div>
+          <div class="review-header">
+            <div>
+              <div class="review-source">${r.source}</div>
+              <div class="review-date">${r.date} ${regionTag}</div>
+            </div>
+            <span class="review-model-badge">${r.model}</span>
+          </div>
+          ${ratingHtml}
+        </div>
+        ${r.verdict ? `<div class="review-verdict">${r.verdict}</div>` : ''}
+        ${quoteHtml}
+        <div class="pros-cons">${prosHtml}${consHtml}</div>
+        ${r.url ? `<a class="review-link" href="${r.url}" target="_blank">Read full review →</a>` : ''}
+      </div>
+    `;
+  }
+
+  function renderMediaReviews(d) {
+    const g = document.getElementById('media-reviews-grid');
+    if (!d.media_reviews || d.media_reviews.length === 0) {
+      g.innerHTML = '<div class="empty-card"><div class="empty-icon">📰</div><p>No media reviews yet.</p></div>';
+      return;
+    }
+    g.innerHTML = d.media_reviews.map(renderReviewCard).join('');
+  }
+
+  function renderUserReviews(d) {
+    const g = document.getElementById('user-reviews-grid');
+    if (!d.user_reviews || d.user_reviews.length === 0) {
+      g.innerHTML = `
+        <div class="empty-card">
+          <div class="empty-icon">🛒</div>
+          <p>No user reviews yet. The M850L ships in June 2026 — check back after launch for Amazon, JD.com, Taobao, and Reddit feedback.</p>
+        </div>
+      `;
+      return;
+    }
+    g.innerHTML = d.user_reviews.map(renderReviewCard).join('');
+  }
+
+  function renderThemes(d) {
+    const g = document.getElementById('themes-grid');
+    g.innerHTML = `
+      <div class="theme-card theme-green">
+        <div class="theme-card-title">✓ Strengths</div>
+        <ul class="theme-list">${d.key_themes.strengths.map(s=>`<li>${s}</li>`).join('')}</ul>
+      </div>
+      <div class="theme-card theme-red">
+        <div class="theme-card-title">! Weaknesses / Concerns</div>
+        <ul class="theme-list">${d.key_themes.weaknesses.map(s=>`<li>${s}</li>`).join('')}</ul>
+      </div>
+      <div class="theme-card theme-yellow">
+        <div class="theme-card-title">? Open Questions</div>
+        <ul class="theme-list">${d.key_themes.open_questions.map(s=>`<li>${s}</li>`).join('')}</ul>
+      </div>
+    `;
+  }
+
+  function renderSpecs(d) {
+    const t = document.getElementById('spec-table');
+    const specs = {
+      'Price (Consumer)': [d.product.prices.M850L, d.product.prices.M840L],
+      'Price (Business)': [d.product.prices.M850L_business || '—', '—'],
+      'Key Feature': [d.specs.M850L.key_feature, d.specs.M840L.key_feature],
+      'Sensor': [d.specs.M850L.sensor, d.specs.M840L.sensor],
+      'Connectivity': [d.specs.M850L.connectivity, d.specs.M840L.connectivity],
+      'Buttons': [d.specs.M850L.buttons, d.specs.M840L.buttons],
+      'Battery': [d.specs.M850L.battery, d.specs.M840L.battery],
+      'Multi-Device': [d.specs.M850L.multi_device, d.specs.M840L.multi_device],
+      'Handedness': [d.specs.M850L.handedness, d.specs.M840L.handedness],
+      'Software': [d.specs.M850L.software, d.specs.M840L.software],
+      'Sustainability': [d.specs.M850L.sustainability, '—'],
+      'Colors': [d.specs.M850L.colors.join(', '), '—'],
+    };
+    t.innerHTML = `
+      <thead><tr><th>Spec</th><th>M850L</th><th>M840L</th></tr></thead>
+      <tbody>${Object.entries(specs).map(([k,v])=>`<tr><td>${k}</td><td>${v[0]}</td><td>${v[1]}</td></tr>`).join('')}</tbody>
+    `;
+  }
+
+  function renderTimeline(d) {
+    const t = document.getElementById('update-timeline');
+    if (!d.update_log || d.update_log.length === 0) {
+      t.innerHTML = '<p style="color:var(--muted)">No updates yet.</p>';
+      return;
+    }
+    t.innerHTML = d.update_log.slice().reverse().map((u, i) => `
+      <div class="timeline-item">
+        <div class="timeline-dot">${d.update_log.length - i}</div>
+        <div class="timeline-content">
+          <div class="timeline-date">${u.date}</div>
+          <div class="timeline-title">${u.new_media > 0 ? u.new_media + ' media source' + (u.new_media > 1 ? 's' : '') : ''}${u.new_reviews > 0 ? (u.new_media > 0 ? ' · ' : '') + u.new_reviews + ' user review' + (u.new_reviews > 1 ? 's' : '') : ''} added</div>
+          <div class="timeline-body">${u.summary}</div>
+          ${u.sources ? `<div class="timeline-chips">${u.sources.map(s=>`<span class="chip">${s}</span>`).join('')}</div>` : ''}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderMonitor(d) {
+    const g = document.getElementById('monitor-grid');
+    g.innerHTML = d.monitoring_targets.map(m => `
+      <div class="monitor-card">
+        <div class="monitor-name">${m.platform}</div>
+        <div class="monitor-priority ${m.priority === 'high' ? 'priority-high' : 'priority-medium'}">
+          ${m.priority === 'high' ? '● High' : '◎ Medium'} priority
+        </div>
+        <a class="monitor-link" href="${m.url}" target="_blank">${m.url.replace('https://', '')}</a>
+        <div style="font-size:11px;color:var(--muted)">${m.region === 'cn' ? '🇨🇳 China' : m.region === 'us' ? '🇺🇸 US' : '🌐 Global'}</div>
+      </div>
+    `).join('');
+  }
+</script>
+</body>
+</html>

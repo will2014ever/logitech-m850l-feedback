@@ -1,0 +1,190 @@
+{
+  "product": {
+    "models": ["M850L", "M840L"],
+    "line": "Signature Comfort Plus",
+    "announced": "2026-05-26",
+    "available": "June 2026",
+    "prices": {
+      "M850L": "$49.99",
+      "M850L_business": "$59.99",
+      "M840L": "$39.99"
+    }
+  },
+  "meta": {
+    "last_updated": "2026-05-28",
+    "next_update": "2026-06-03",
+    "schedule": "Every Tuesday & Friday",
+    "status": "pre-launch",
+    "total_reviews": 0,
+    "total_media_sources": 4,
+    "overall_sentiment": "positive",
+    "sentiment_score": 7.8
+  },
+  "specs": {
+    "M850L": {
+      "sensor": "4000 DPI Pluto ONE",
+      "connectivity": "Bluetooth 5.2 LE + Logi Bolt 2.4GHz",
+      "buttons": "6 customizable + Action Ring",
+      "battery": "~2 years (1× AA)",
+      "multi_device": "3-device Easy-Switch",
+      "handedness": "Right-hand only",
+      "software": "Logi Options+",
+      "sustainability": "≥63% post-consumer recycled plastic",
+      "colors": ["Graphite", "Off-White", "Black"],
+      "key_feature": "First Logitech palm cushion"
+    },
+    "M840L": {
+      "sensor": "4000 DPI Pluto ONE",
+      "connectivity": "Bluetooth + Logi Bolt",
+      "buttons": "Standard layout",
+      "battery": "~2 years (1× AA)",
+      "multi_device": "3-device Easy-Switch",
+      "handedness": "Right-hand only",
+      "software": "Logi Options+",
+      "key_feature": "No cushion, lower price"
+    }
+  },
+  "key_themes": {
+    "strengths": [
+      "Ergonomic palm cushion comfort for all-day use",
+      "Silent operation — 90% quieter than M185",
+      "3-device Easy-Switch — seamless and reliable",
+      "~2-year battery life on 1× AA (class-leading)",
+      "Action Ring AI shortcuts (Copilot, ChatGPT, screen lock)",
+      "63%+ post-consumer recycled plastic"
+    ],
+    "weaknesses": [
+      "Right-hand only — no left-hand option",
+      "Palm cushion not easily removable",
+      "Button feel described as 'slightly brittle plastic'",
+      "$10 premium over M840L questioned — is cushion worth it?",
+      "Full feature set requires Logi Options+ software install"
+    ],
+    "open_questions": [
+      "Palm cushion long-term durability over months of daily use",
+      "Comfort for users with smaller hands",
+      "Chinese market ergonomic preference vs. vertical mice",
+      "JD.com / Taobao pricing vs. US MSRP"
+    ]
+  },
+  "media_reviews": [
+    {
+      "id": "theregister-2026-05-26",
+      "source": "The Register",
+      "url": "https://www.theregister.com/personal-tech/2026/05/26/logitech-unveils-a-cushioned-mouse-for-all-day-use/5246078",
+      "date": "2026-05-26",
+      "model": "M850L",
+      "type": "media",
+      "region": "global",
+      "verdict": "Worth considering during a routine hardware refresh, but not urgent unless your palm is really sore.",
+      "rating": null,
+      "pros": [
+        "Comfortable fit after 1+ week of extended testing",
+        "Near-silent buttons — noticeable improvement",
+        "Versatile connectivity: Bluetooth + multi-OS",
+        "SmartWheel precision/speed toggle genuinely useful",
+        "~2-year battery on one AA cell",
+        "Strong sustainability (49–77% recycled plastic)",
+        "3-device pairing works seamlessly"
+      ],
+      "cons": [
+        "Right-hand only",
+        "Palm cushion not easily removable",
+        "Buttons feel 'slightly brittle plastic'",
+        "Reviewer questions if cushion is 'a game-changer'"
+      ],
+      "quote": "High-quality soft-touch plastic would do just as well for many users."
+    },
+    {
+      "id": "mobilesyrup-2026-05-26",
+      "source": "MobileSyrup",
+      "url": "https://mobilesyrup.com/2026/05/26/logitech-signature-comfort-plus-review/",
+      "date": "2026-05-26",
+      "model": "M850L",
+      "type": "media",
+      "region": "global",
+      "verdict": "Comfortable, well-connected, with solid software — though review leans promotional.",
+      "rating": null,
+      "pros": [
+        "Upper-palm rest and large size fits well in hand",
+        "Bluetooth to 3 devices, Easy-Switch reliable",
+        "Action Ring: notes, screen lock, file explorer, Copilot, ChatGPT",
+        "Logi Options+: per-app remapping, DPI, on-screen highlighting"
+      ],
+      "cons": [
+        "Review reads as promotional; limited critical depth",
+        "Large size may reduce portability",
+        "Some features require Logi Options+ install"
+      ],
+      "quote": null
+    },
+    {
+      "id": "gearbrain-2026-05-26",
+      "source": "GearBrain",
+      "url": "https://www.gearbrain.com/logitech-signature-comfort-plus-combo-review-2676956939.html",
+      "date": "2026-05-26",
+      "model": "M850L",
+      "type": "media",
+      "region": "global",
+      "verdict": "Ergonomic comfort, quiet operation, and seamless multi-device support.",
+      "rating": 8.5,
+      "rating_max": 10,
+      "pros": [
+        "Ergonomic comfort validated for all-day office use",
+        "Silent clicking and scrolling — ideal for open offices",
+        "Multi-device switching seamless",
+        "AI/productivity shortcuts (Action Ring) add real value",
+        "SmartWheel precision to hyper-fast toggle"
+      ],
+      "cons": [
+        "Right-hand design only",
+        "Not for gaming or demanding precision tasks",
+        "Some features need Logi Options+"
+      ],
+      "quote": null
+    },
+    {
+      "id": "ithome-2026-05-26",
+      "source": "IT之家",
+      "url": "https://www.ithome.com/0/955/479.htm",
+      "date": "2026-05-26",
+      "model": "M850L",
+      "type": "media",
+      "region": "cn",
+      "verdict": "新闻资讯报道为主，无深度评测。",
+      "rating": null,
+      "pros": [
+        "掌垫设计为罗技首款，获中文科技媒体关注",
+        "Pluto ONE 4000 DPI 传感器规格受认可",
+        "蓝牙 + Bolt 双模连接被视为实用特性",
+        "24个月续航获高度评价"
+      ],
+      "cons": [
+        "目前仅为产品资讯，无实测数据",
+        "用户端真实评价尚待产品上市后积累"
+      ],
+      "quote": null
+    }
+  ],
+  "user_reviews": [],
+  "update_log": [
+    {
+      "date": "2026-05-28",
+      "sources": ["The Register", "MobileSyrup", "GearBrain", "IT之家"],
+      "summary": "Pre-launch media impressions collected. No end-user reviews available — product ships June 2026. Overall sentiment positive. Key concern: right-hand only design and cushion value vs M840L.",
+      "new_reviews": 0,
+      "new_media": 4
+    }
+  ],
+  "monitoring_targets": [
+    {"platform": "Amazon US", "url": "https://www.amazon.com/s?k=Logitech+M850L", "priority": "high", "region": "us"},
+    {"platform": "Amazon CA/UK", "url": "https://www.amazon.ca/s?k=Logitech+M850L", "priority": "medium", "region": "global"},
+    {"platform": "JD.com", "url": "https://search.jd.com/Search?keyword=%E7%BD%97%E6%8A%80M850L", "priority": "high", "region": "cn"},
+    {"platform": "Taobao/Tmall", "url": "https://s.taobao.com/search?q=%E7%BD%97%E6%8A%80M850L", "priority": "high", "region": "cn"},
+    {"platform": "什么值得买", "url": "https://www.smzdm.com/search/?s=%E7%BD%97%E6%8A%80M850L", "priority": "high", "region": "cn"},
+    {"platform": "知乎", "url": "https://www.zhihu.com/search?type=content&q=%E7%BD%97%E6%8A%80M850L%E8%AF%84%E6%B5%8B", "priority": "medium", "region": "cn"},
+    {"platform": "Reddit", "url": "https://www.reddit.com/search/?q=Logitech+M850L", "priority": "medium", "region": "us"},
+    {"platform": "YouTube", "url": "https://www.youtube.com/results?search_query=Logitech+M850L+review", "priority": "medium", "region": "global"},
+    {"platform": "Bilibili", "url": "https://search.bilibili.com/all?keyword=%E7%BD%97%E6%8A%80M850L", "priority": "medium", "region": "cn"}
+  ]
+}
