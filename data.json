@@ -3,22 +3,24 @@
     "models": ["M850L", "M840L"],
     "line": "Signature Comfort Plus",
     "announced": "2026-05-26",
-    "available": "June 2026",
+    "available": "China: on sale now (¥319). Global: June 2026",
     "prices": {
       "M850L": "$49.99",
       "M850L_business": "$59.99",
-      "M840L": "$39.99"
+      "M840L": "$39.99",
+      "M850L_cn": "¥319 (to-hand ~¥280.72)",
+      "M840L_amazon_asin": "B0GSJ4YZTN"
     }
   },
   "meta": {
-    "last_updated": "2026-05-28",
-    "next_update": "2026-06-03",
+    "last_updated": "2026-05-29",
+    "next_update": "2026-06-02",
     "schedule": "Every Tuesday & Friday",
-    "status": "pre-launch",
+    "status": "launched-cn",
     "total_reviews": 0,
-    "total_media_sources": 4,
+    "total_media_sources": 8,
     "overall_sentiment": "positive",
-    "sentiment_score": 7.8
+    "sentiment_score": 7.5
   },
   "specs": {
     "M850L": {
@@ -58,13 +60,15 @@
       "Palm cushion not easily removable",
       "Button feel described as 'slightly brittle plastic'",
       "$10 premium over M840L questioned — is cushion worth it?",
-      "Full feature set requires Logi Options+ software install"
+      "Full feature set requires Logi Options+ software install",
+      "Cushion doesn't reach palm for larger-handed users — Senses.se confirmed palm rests above cushion if hand is large",
+      "Not rechargeable — AA battery only (no USB-C charging)"
     ],
     "open_questions": [
       "Palm cushion long-term durability over months of daily use",
-      "Comfort for users with smaller hands",
-      "Chinese market ergonomic preference vs. vertical mice",
-      "JD.com / Taobao pricing vs. US MSRP"
+      "Cushion effectiveness for larger hands — Senses.se found palm rests above the cushion, not on it (answered: concern confirmed)",
+      "First genuine Amazon/JD.com buyer reviews post-shipping",
+      "Chinese user reaction to ¥319 price vs US $49.99 equivalent"
     ]
   },
   "media_reviews": [
@@ -164,6 +168,92 @@
         "用户端真实评价尚待产品上市后积累"
       ],
       "quote": null
+    },
+    {
+      "id": "cultofmac-2026-05-28",
+      "source": "Cult of Mac",
+      "url": "https://www.cultofmac.com/reviews/logitech-signature-comfort-plus-m850-l-mk880-review",
+      "date": "2026-05-28",
+      "model": "M850L",
+      "type": "media",
+      "region": "global",
+      "verdict": "A comfy, squishy palm cushion mouse that feels solid and glides well — but not rechargeable.",
+      "rating": 4,
+      "rating_max": 5,
+      "pros": [
+        "Palm cushion is nice and squishy, designed to last years of daily use",
+        "Weight feels right — solid but not too bulky",
+        "Glides well on mousepad",
+        "Silent clicks"
+      ],
+      "cons": [
+        "Not rechargeable — runs on AA battery only (no USB-C)",
+        "Right-hand only design"
+      ],
+      "quote": "The palm cushion is nice and squishy — and it's been designed to last for years of daily use, despite the soft material."
+    },
+    {
+      "id": "senses-2026-05-28",
+      "source": "Senses.se",
+      "url": "https://www.senses.se/en/review-logitech-signature-comfort-plus/",
+      "date": "2026-05-28",
+      "model": "M850L",
+      "type": "media",
+      "region": "global",
+      "verdict": "Excellent mouse overall, but the signature palm cushion delivers minimal benefit — especially for larger hands where the palm rests above, not on, the cushion.",
+      "rating": null,
+      "pros": [
+        "Fits well even for large hands",
+        "Quiet, lightweight, all buttons easily accessible",
+        "Comfortable to use in general"
+      ],
+      "cons": [
+        "For larger hands: palm rests above the cushion, not on it — cushion provides no tactile benefit",
+        "'Even if you consciously press your hand down to feel the cushion, the effect is minimal'",
+        "Nothing extraordinary compared to the MX Master 4",
+        "Main differentiator (cushion) underdelivers on its promise"
+      ],
+      "quote": "The M850L is an excellent mouse, but its main attraction made little impression. Even if you consciously press your hand down to feel the cushion, the effect is minimal."
+    },
+    {
+      "id": "thepoint-2026-05-26",
+      "source": "The Point Online",
+      "url": "https://www.thepoint.online/logitech-signature-comfort-plus-mk880-hands-on/",
+      "date": "2026-05-26",
+      "model": "M850L",
+      "type": "media",
+      "region": "global",
+      "verdict": "Cushion does work — less straining after extended use, even if the difference is subtle.",
+      "rating": null,
+      "pros": [
+        "Palm cushion reduces fatigue after heavy clicking and scrolling",
+        "Comfortable for extended sessions"
+      ],
+      "cons": [
+        "May not make a world of difference vs a standard mouse"
+      ],
+      "quote": "The palm cushion does work: it may not make a world of difference compared to a hard-surfaced mouse, but the M850L does feel less straining to use after a lot of button-clicking and wheel-scrolling."
+    },
+    {
+      "id": "ithome-sale-2026-05-29",
+      "source": "IT之家 (China launch)",
+      "url": "https://www.ithome.com/0/957/834.htm",
+      "date": "2026-05-29",
+      "model": "M850L",
+      "type": "media",
+      "region": "cn",
+      "verdict": "罗技M850L中国正式开售，到手价280.72元。",
+      "rating": null,
+      "pros": [
+        "正式开售，国内用户可购买",
+        "官方售价319元，到手约280.72元（低于美国售价换算）",
+        "SmartWheel滚轮、轻音按键、蓝牙多设备切换获认可"
+      ],
+      "cons": [
+        "尚无中国真实买家评价",
+        "仅蓝牙连接（无Bolt接收器部分SKU）"
+      ],
+      "quote": "罗技 M850L 鼠标已正式开售，官方标价 319 元，到手价 280.72 元。"
     }
   ],
   "user_reviews": [],
@@ -172,6 +262,13 @@
       "date": "2026-05-28",
       "sources": ["The Register", "MobileSyrup", "GearBrain", "IT之家"],
       "summary": "Pre-launch media impressions collected. No end-user reviews available — product ships June 2026. Overall sentiment positive. Key concern: right-hand only design and cushion value vs M840L.",
+      "new_reviews": 0,
+      "new_media": 4
+    },
+    {
+      "date": "2026-05-29",
+      "sources": ["Cult of Mac", "Senses.se", "The Point Online", "IT之家 (sale launch)"],
+      "summary": "SIGNIFICANT: M850L now on sale in China at ¥319 (to-hand ¥280.72) — product has launched ahead of 'June 2026' global date. M840L Amazon listing live (ASIN B0GSJ4YZTN). Three new media reviews: Cult of Mac (4/5), Senses.se (mixed — critical ergonomic finding: cushion doesn't reach palm for larger-handed users), The Point Online (positive hands-on). No end-user buyer reviews yet. Sentiment score adjusted to 7.5 due to emerging concern about cushion effectiveness for larger hands.",
       "new_reviews": 0,
       "new_media": 4
     }
