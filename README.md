@@ -20,7 +20,7 @@ A live-updating dashboard tracking user and media feedback for the Logitech Sign
 
 ## Update Schedule
 
-Updated **every Tuesday and Friday** via the `product-feedback-monitor` Claude Code skill.
+Updated **every Friday** via the `product-feedback-monitor` Claude Code skill.
 
 ## How updates work
 

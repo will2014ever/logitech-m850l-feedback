@@ -435,8 +435,8 @@
     });
   });
 
-  // Fetch data and render
-  fetch('data.json?v=' + Date.now())
+  // cache:'no-store' forces browser past GitHub Pages CDN cache on every load
+  fetch('data.json', { cache: 'no-store' })
     .then(r => r.json())
     .then(data => {
       renderMeta(data);
@@ -455,24 +455,31 @@
   function renderMeta(d) {
     document.getElementById('last-updated').textContent = d.meta.last_updated;
     document.getElementById('next-update').textContent = d.meta.next_update;
-    if (d.meta.status === 'post-launch') {
-      document.getElementById('status-badge').textContent = 'Live Reviews';
-      document.getElementById('status-badge').classList.remove('badge-prelaunch');
-      document.getElementById('status-badge').classList.add('badge-live');
+    const status = d.meta.status;
+    const badge = document.getElementById('status-badge');
+    if (status === 'post-launch') {
+      badge.textContent = 'Live Reviews';
+      badge.classList.remove('badge-prelaunch');
+      badge.classList.add('badge-live');
+    } else if (status === 'launched-cn') {
+      badge.textContent = 'Launched in China';
+      badge.classList.remove('badge-prelaunch');
+      badge.classList.add('badge-cn');
     } else {
-      document.getElementById('status-badge').textContent = 'Pre-Launch';
+      badge.textContent = 'Pre-Launch';
     }
   }
 
   function renderStats(d) {
     const g = document.getElementById('stats-grid');
+    const isCN = d.meta.status === 'launched-cn';
     const cards = [
       { label: 'User Reviews', value: d.meta.total_reviews, sub: 'across all platforms' },
       { label: 'Media Sources', value: d.meta.total_media_sources, sub: 'press & tech media' },
       { label: 'Sentiment Score', value: d.meta.sentiment_score + '/10', sub: d.meta.overall_sentiment },
-      { label: 'Update Frequency', value: '2×/week', sub: 'Tue & Fri' },
+      { label: 'Last Updated', value: d.meta.last_updated, sub: 'Next: ' + d.meta.next_update },
       { label: 'Platforms Tracked', value: d.monitoring_targets.length, sub: 'global & CN' },
-      { label: 'Launch Date', value: 'June 2026', sub: 'shipping globally' },
+      { label: 'Availability', value: isCN ? 'Live in CN' : 'June 2026', sub: isCN ? '¥319 · Global Jun 2026' : 'shipping globally' },
     ];
     g.innerHTML = cards.map(c => `
       <div class="stat-card">
