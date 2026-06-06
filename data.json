@@ -3,24 +3,29 @@
     "models": ["M850L", "M840L"],
     "line": "Signature Comfort Plus",
     "announced": "2026-05-26",
-    "available": "China: on sale now (¥319). Global: June 2026",
+    "available": "China: on sale now (¥319). US: shipping on Amazon now",
     "prices": {
       "M850L": "$49.99",
       "M850L_business": "$59.99",
       "M840L": "$39.99",
       "M850L_cn": "¥319 (to-hand ~¥280.72)",
+      "M850L_amazon_asin": "B0GSHRCS7L",
       "M840L_amazon_asin": "B0GSJ4YZTN"
     }
   },
   "meta": {
-    "last_updated": "2026-05-29",
-    "next_update": "2026-06-02",
-    "schedule": "Every Tuesday & Friday",
-    "status": "launched-cn",
-    "total_reviews": 0,
+    "last_updated": "2026-06-07",
+    "next_update": "2026-06-12",
+    "schedule": "Every Friday",
+    "status": "post-launch",
+    "total_reviews": 8,
     "total_media_sources": 8,
     "overall_sentiment": "positive",
-    "sentiment_score": 7.5
+    "sentiment_score": 8.0,
+    "amazon_ratings": {
+      "M850L": {"rating": 4.6, "count": 11},
+      "M840L": {"rating": 4.4, "count": 14}
+    }
   },
   "specs": {
     "M850L": {
@@ -48,26 +53,27 @@
   },
   "key_themes": {
     "strengths": [
+      "Verified Amazon buyers rate it high: M850L 4.6★ (11 ratings), M840L 4.4★ (14 ratings)",
       "Ergonomic palm cushion comfort for all-day use",
-      "Silent operation — 90% quieter than M185",
-      "3-device Easy-Switch — seamless and reliable",
+      "Silent operation — buyers say the quiet clicks are 'blissful' once adjusted",
+      "3-device Easy-Switch — buyers call the numbered Bluetooth switching seamless and instant",
       "~2-year battery life on 1× AA (class-leading)",
       "Action Ring AI shortcuts (Copilot, ChatGPT, screen lock)",
       "63%+ post-consumer recycled plastic"
     ],
     "weaknesses": [
+      "No USB receiver in the box — Bluetooth-only causes occasional connectivity blips (Amazon 3★ & 2★ buyers)",
+      "At ~$50 some buyers expect a rechargeable mouse, not a AA cell (Amazon 3★)",
+      "M840L feels too lightweight for some hands (Amazon 2★)",
       "Right-hand only — no left-hand option",
       "Palm cushion not easily removable",
-      "Button feel described as 'slightly brittle plastic'",
-      "$10 premium over M840L questioned — is cushion worth it?",
-      "Full feature set requires Logi Options+ software install",
-      "Cushion doesn't reach palm for larger-handed users — Senses.se confirmed palm rests above cushion if hand is large",
-      "Not rechargeable — AA battery only (no USB-C charging)"
+      "Cushion doesn't reach palm for larger-handed users — Senses.se confirmed palm rests above cushion",
+      "Full feature set requires Logi Options+ software install"
     ],
     "open_questions": [
       "Palm cushion long-term durability over months of daily use",
-      "Cushion effectiveness for larger hands — Senses.se found palm rests above the cushion, not on it (answered: concern confirmed)",
-      "First genuine Amazon/JD.com buyer reviews post-shipping",
+      "JD.com / Taobao Chinese buyer comments still behind login / anti-bot — to capture next run",
+      "Will the no-USB-receiver complaint grow as more mainstream buyers arrive?",
       "Chinese user reaction to ¥319 price vs US $49.99 equivalent"
     ]
   },
@@ -256,7 +262,128 @@
       "quote": "罗技 M850L 鼠标已正式开售，官方标价 319 元，到手价 280.72 元。"
     }
   ],
-  "user_reviews": [],
+  "user_reviews": [
+    {
+      "id": "amazon-m850l-awesomegaming-2026-05-30",
+      "source": "Amazon US — Awesome Gaming",
+      "url": "https://www.amazon.com/dp/B0GSHRCS7L",
+      "date": "2026-05-30",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Signature comfort is an understatement. The tech inside is equally fantastic.",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Built-in palm cushion makes a massive difference", "Contoured shape + cozy side grips = natural fit all day", "Works flawlessly across Windows and Mac"],
+      "cons": [],
+      "quote": "This is Logitech's first mouse to feature a built-in palm cushion, and it makes a massive difference. My hand sits in a natural, confident fit that keeps me relaxed and in control all day long."
+    },
+    {
+      "id": "amazon-m850l-jf-2026-06-01",
+      "source": "Amazon US — J F",
+      "url": "https://www.amazon.com/dp/B0GSHRCS7L",
+      "date": "2026-06-01",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "24 month battery life — now my primary mouse.",
+      "rating": 4,
+      "rating_max": 5,
+      "pros": ["Outperforms previous mice on comfort", "Long battery life"],
+      "cons": [],
+      "quote": "For comfort, the M850L outperforms my previous mice and I am overall satisfied with this M850L which is now my primary mouse."
+    },
+    {
+      "id": "amazon-m850l-broopa-2026-05-31",
+      "source": "Amazon US — BrooPa",
+      "url": "https://www.amazon.com/dp/B0GSHRCS7L",
+      "date": "2026-05-31",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "The ultimate productivity upgrade for long workdays!",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Up-to-24-month battery longevity", "Made with ≥49% post-consumer recycled plastic"],
+      "cons": [],
+      "quote": "This mouse maximizes your productivity! The battery longevity is mind-blowing — it stays powered up for up to 24 months."
+    },
+    {
+      "id": "amazon-m850l-justinbuyer-2026-05-31",
+      "source": "Amazon US — JustinBuyer",
+      "url": "https://www.amazon.com/dp/B0GSHRCS7L",
+      "date": "2026-05-31",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Not a fan of Bluetooth-only mice at this price.",
+      "rating": 3,
+      "rating_max": 5,
+      "pros": [],
+      "cons": ["At $50+ expected a rechargeable mouse, not AA", "Bluetooth-only — gets connectivity blips like other BT devices"],
+      "quote": "For a $50 mouse this to me is unacceptable. At this price I expect a chargeable mouse, and the only way to connect is via Bluetooth — you get connectivity blips. This is annoying and frustrating."
+    },
+    {
+      "id": "amazon-m850l-customer-2026-06-02",
+      "source": "Amazon US — Amazon Customer",
+      "url": "https://www.amazon.com/dp/B0GSHRCS7L",
+      "date": "2026-06-02",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Easy and cute!",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Fast and easy to use and install"],
+      "cons": [],
+      "quote": "It gives a special touch to my computer and it is also fast and easy to use and install."
+    },
+    {
+      "id": "amazon-m840l-customer-2026-05-30",
+      "source": "Amazon US — Amazon Customer",
+      "url": "https://www.amazon.com/dp/B0GSJ4YZTN",
+      "date": "2026-05-30",
+      "model": "M840L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Comfort, silence, and versatility — can't live without it now.",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Perfect size and contour for the hand", "Truly silent clicks — 'blissful' to work without the sound", "Pairs with up to 3 devices", "Silent roller wheel", "Came with a starter battery"],
+      "cons": ["Default scroll speed a bit slow (adjustable in settings)"],
+      "quote": "This mouse doesn't click! It hits the mark instantly with only the slightest pressure… it's really quite blissful to work without the clicking sound. Overall I'm thrilled — comfortable, silent, and versatile."
+    },
+    {
+      "id": "amazon-m840l-xander-2026-05-30",
+      "source": "Amazon US — Xander",
+      "url": "https://www.amazon.com/dp/B0GSJ4YZTN",
+      "date": "2026-05-30",
+      "model": "M840L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Wonderful work mouse — best Bluetooth switching I've used.",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Comfort immediately noticeable, great for extended use", "Clear numbered indicators show connected device", "Instant switching across up to 3 devices, no dongle", "Up to 24-month battery"],
+      "cons": ["Silent clicks take adjustment if you're used to tactile feedback", "Not a gaming mouse"],
+      "quote": "The Bluetooth multi-device switching is genuinely one of the better implementations I have used — clear numbered indicators, switching is instant. A genuinely great everyday productivity mouse."
+    },
+    {
+      "id": "amazon-m840l-danh-2026-06-01",
+      "source": "Amazon US — Dan H.",
+      "url": "https://www.amazon.com/dp/B0GSJ4YZTN",
+      "date": "2026-06-01",
+      "model": "M840L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Not a great mouse. You can do better, Logitech!",
+      "rating": 2,
+      "rating_max": 5,
+      "pros": ["Shape good for a medium-large hand", "Paired instantly with Windows 11"],
+      "cons": ["No USB adapter included and no slot to store one", "Very lightweight — a dealbreaker for those who prefer more weight"],
+      "quote": "I'm a Logitech fan, but this mouse is not good. Out of the box there's no USB adapter — it supports one but it's not included. The shape is good for my medium-large hand, but it's very lightweight. A dealbreaker at this point."
+    }
+  ],
   "update_log": [
     {
       "date": "2026-05-28",
@@ -271,11 +398,18 @@
       "summary": "SIGNIFICANT: M850L now on sale in China at ¥319 (to-hand ¥280.72) — product has launched ahead of 'June 2026' global date. M840L Amazon listing live (ASIN B0GSJ4YZTN). Three new media reviews: Cult of Mac (4/5), Senses.se (mixed — critical ergonomic finding: cushion doesn't reach palm for larger-handed users), The Point Online (positive hands-on). No end-user buyer reviews yet. Sentiment score adjusted to 7.5 due to emerging concern about cushion effectiveness for larger hands.",
       "new_reviews": 0,
       "new_media": 4
+    },
+    {
+      "date": "2026-06-07",
+      "sources": ["Amazon US — M850L (B0GSHRCS7L)", "Amazon US — M840L (B0GSJ4YZTN)"],
+      "summary": "FIRST REAL BUYER REVIEWS captured via Firecrawl stealth scrape. M850L: 4.6★ from 11 ratings (5 written reviews); M840L: 4.4★ from 14 ratings (3 written reviews). Praise: comfort, genuinely silent clicks, seamless numbered 3-device Bluetooth switching, 24-month battery. Complaints: no USB receiver in the box / Bluetooth-only connectivity blips, M840L too lightweight for some, and at ~$50 some buyers expect rechargeable rather than AA. Buyer sentiment strongly positive overall (avg ≈4.5★). Status moved to post-launch; sentiment score raised to 8.0. JD.com/Taobao Chinese buyer comments remain behind login/anti-bot.",
+      "new_reviews": 8,
+      "new_media": 0
     }
   ],
   "monitoring_targets": [
-    {"platform": "Amazon US", "url": "https://www.amazon.com/s?k=Logitech+M850L", "priority": "high", "region": "us"},
-    {"platform": "Amazon CA/UK", "url": "https://www.amazon.ca/s?k=Logitech+M850L", "priority": "medium", "region": "global"},
+    {"platform": "Amazon US — M850L", "url": "https://www.amazon.com/dp/B0GSHRCS7L", "priority": "high", "region": "us"},
+    {"platform": "Amazon US — M840L", "url": "https://www.amazon.com/dp/B0GSJ4YZTN", "priority": "high", "region": "us"},
     {"platform": "JD.com", "url": "https://search.jd.com/Search?keyword=%E7%BD%97%E6%8A%80M850L", "priority": "high", "region": "cn"},
     {"platform": "Taobao/Tmall", "url": "https://s.taobao.com/search?q=%E7%BD%97%E6%8A%80M850L", "priority": "high", "region": "cn"},
     {"platform": "什么值得买", "url": "https://www.smzdm.com/search/?s=%E7%BD%97%E6%8A%80M850L", "priority": "high", "region": "cn"},
