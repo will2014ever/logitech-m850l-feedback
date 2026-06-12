@@ -14,17 +14,17 @@
     }
   },
   "meta": {
-    "last_updated": "2026-06-07",
-    "next_update": "2026-06-12",
+    "last_updated": "2026-06-12",
+    "next_update": "2026-06-19",
     "schedule": "Every Friday",
     "status": "post-launch",
-    "total_reviews": 8,
-    "total_media_sources": 8,
+    "total_reviews": 17,
+    "total_media_sources": 9,
     "overall_sentiment": "positive",
     "sentiment_score": 8.0,
     "amazon_ratings": {
-      "M850L": {"rating": 4.6, "count": 11},
-      "M840L": {"rating": 4.4, "count": 14}
+      "M850L": {"rating": 4.3, "count": 17},
+      "M840L": {"rating": 4.5, "count": 15}
     }
   },
   "specs": {
@@ -53,28 +53,32 @@
   },
   "key_themes": {
     "strengths": [
-      "Verified Amazon buyers rate it high: M850L 4.6★ (11 ratings), M840L 4.4★ (14 ratings)",
-      "Ergonomic palm cushion comfort for all-day use",
+      "Verified Amazon buyers rate it well: M850L 4.3★ (17 ratings), M840L 4.5★ (15 ratings)",
+      "Ergonomic comfort for all-day use — repeatedly the #1 praised attribute across buyers",
       "Silent operation — buyers say the quiet clicks are 'blissful' once adjusted",
-      "3-device Easy-Switch — buyers call the numbered Bluetooth switching seamless and instant",
-      "~2-year battery life on 1× AA (class-leading)",
+      "SmartWheel adaptive scroll — one buyer calls it 'the best mouse wheel I've used' (precise slow, fast auto-far)",
+      "3-device Easy-Switch — buyers call the numbered Bluetooth switching seamless and instant, 'one of the better implementations'",
+      "~2-year battery life on 1× AA (class-leading); starter battery included",
       "Action Ring AI shortcuts (Copilot, ChatGPT, screen lock)",
-      "63%+ post-consumer recycled plastic"
+      "63%+ post-consumer recycled plastic",
+      "Media echo: Tom's Guide calls it 'unparalleled comfort for just $49'"
     ],
     "weaknesses": [
-      "No USB receiver in the box — Bluetooth-only causes occasional connectivity blips (Amazon 3★ & 2★ buyers)",
-      "At ~$50 some buyers expect a rechargeable mouse, not a AA cell (Amazon 3★)",
-      "M840L feels too lightweight for some hands (Amazon 2★)",
+      "No USB receiver in the box — Bluetooth-only causes occasional connectivity blips; Logi Bolt sold separately (~$14). Echoed by Amazon buyers AND Tom's Guide",
+      "Silent-click regression: a 1★ buyer says the M850L (and MX Master 4) clicks are 'significantly louder' than the older M650 — 'when I'm shopping for silent click, I expect silent click'",
+      "At ~$50/$40 some buyers expect a rechargeable mouse, not a AA cell (Amazon 3★/1★)",
+      "M840L build feels cheap/too lightweight for some — 'feels like totally cheap plastic' (Amazon 3★ & 2★)",
+      "Sleep/wake lag — cursor jumps for a split second after ~10s idle while the mouse wakes (Amazon 2★)",
+      "Basic functions (side-button page fwd/back) not preset out of box — requires Logi Options+ install (Amazon 4★)",
       "Right-hand only — no left-hand option",
-      "Palm cushion not easily removable",
-      "Cushion doesn't reach palm for larger-handed users — Senses.se confirmed palm rests above cushion",
-      "Full feature set requires Logi Options+ software install"
+      "Cushion doesn't reach palm for larger-handed users — Senses.se AND a 4★ buyer confirm the palm rests above the cushion; one calls it 'kinda pointless'"
     ],
     "open_questions": [
+      "Will the silent-click 'regression vs M650' complaint recur as more buyers compare to older silent models?",
       "Palm cushion long-term durability over months of daily use",
       "JD.com / Taobao Chinese buyer comments still behind login / anti-bot — to capture next run",
       "Will the no-USB-receiver complaint grow as more mainstream buyers arrive?",
-      "Chinese user reaction to ¥319 price vs US $49.99 equivalent"
+      "Chinese user reaction to ¥319 (first-day ¥279) price vs US $49.99 equivalent"
     ]
   },
   "media_reviews": [
@@ -260,6 +264,29 @@
         "仅蓝牙连接（无Bolt接收器部分SKU）"
       ],
       "quote": "罗技 M850L 鼠标已正式开售，官方标价 319 元，到手价 280.72 元。"
+    },
+    {
+      "id": "tomsguide-2026-06-10",
+      "source": "Tom's Guide",
+      "url": "https://www.tomsguide.com/computing/mice/logitech-signature-comfort-plus-m850l-review",
+      "date": "2026-06-10",
+      "model": "M850L",
+      "type": "media",
+      "region": "global",
+      "verdict": "Unparalleled comfort for just $49 — one of the best budget productivity mice for all-day office work.",
+      "rating": null,
+      "pros": [
+        "Built-in cushioned palm rest and contoured shape — standout all-day comfort",
+        "Quiet clicks",
+        "Speed-adaptive SmartWheel scrolling",
+        "User-friendly Logi Options+ companion software",
+        "24-month battery life"
+      ],
+      "cons": [
+        "Uses disposable AA battery rather than rechargeable",
+        "No 2.4GHz / Logi Bolt receiver in the box — must buy separately (~$14)"
+      ],
+      "quote": "For office workers on a budget, the M850L delivers unparalleled comfort for just $49 — thanks to its built-in cushioned palm rest, contoured shape and 24 months of battery life."
     }
   ],
   "user_reviews": [
@@ -382,6 +409,141 @@
       "pros": ["Shape good for a medium-large hand", "Paired instantly with Windows 11"],
       "cons": ["No USB adapter included and no slot to store one", "Very lightweight — a dealbreaker for those who prefer more weight"],
       "quote": "I'm a Logitech fan, but this mouse is not good. Out of the box there's no USB adapter — it supports one but it's not included. The shape is good for my medium-large hand, but it's very lightweight. A dealbreaker at this point."
+    },
+    {
+      "id": "amazon-m850l-rich-2026-06-06",
+      "source": "Amazon US — Rich",
+      "url": "https://www.amazon.com/review/R19VWL364MEXXE",
+      "date": "2026-06-06",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Excellent mouse, strongly recommend.",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Most comfortable mouse the buyer has ever used", "Very helpful in an office setting"],
+      "cons": [],
+      "quote": "Excellent mouse. I just received it yesterday and it is the most comfortable mouse I've ever used. I found it to be excellent and very, very helpful in an office setting."
+    },
+    {
+      "id": "amazon-m850l-donna-2026-06-09",
+      "source": "Amazon US — donna",
+      "url": "https://www.amazon.com/review/R2KEI680LCN0E5",
+      "date": "2026-06-09",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Awesome mouse — easy to pair, ergonomically perfect.",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Very easy to pair", "Ergonomically perfect"],
+      "cons": [],
+      "quote": "This mouse was very easy to pair to my computer and it was ergonomically perfect. Love it."
+    },
+    {
+      "id": "amazon-m850l-rmo-2026-06-08",
+      "source": "Amazon US — R M O",
+      "url": "https://www.amazon.com/review/R1DG80K8LWAWMT",
+      "date": "2026-06-08",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Good mouse, but not for gaming — and the palm cushion doesn't reach larger hands.",
+      "rating": 4,
+      "rating_max": 5,
+      "pros": ["Rare silent mouse with re-programmable side buttons", "Good large size", "Logi Options+ customization", "Adding a Logitech Bolt USB-A receiver makes a noticeable difference over Bluetooth"],
+      "cons": ["Not made for gaming", "For large ('giant race') hands the palm does not touch the cushion — better off saving $10 on the cushion-less M840L"],
+      "quote": "It's hard to find a silent mouse with re-programmable side buttons, which is why this mouse is decent... If you're a member of the giant race, consider saving 10 dollars and buying the M840 L version without the cushion, as my palm does not touch it."
+    },
+    {
+      "id": "amazon-m850l-brand-2026-06-07",
+      "source": "Amazon US — Brand",
+      "url": "https://www.amazon.com/review/R37AP91YTA0CT5",
+      "date": "2026-06-07",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Silent click? Clicks are louder than the older M650 — going back.",
+      "rating": 1,
+      "rating_max": 5,
+      "pros": ["Mouse itself is otherwise good"],
+      "cons": ["Clicks 'significantly louder' than the M650's silent clicks (same for MX Master 4)", "Palm cushion 'seems kinda pointless'", "Returning to the M650"],
+      "quote": "The mouse is good but what happened to silent clicking? ... with both this M850 and the MX Master 4, the clicks are significantly louder. Not on the level of a normal mouse but when I'm shopping for silent click, I expect silent click. Also the cushion seems kinda pointless."
+    },
+    {
+      "id": "amazon-m840l-christina-2026-06-03",
+      "source": "Amazon US — Christina",
+      "url": "https://www.amazon.com/review/R1GOJFFSLDGLVX",
+      "date": "2026-06-03",
+      "model": "M840L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Comfortable wireless mouse with quiet clicks and great productivity features.",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Ergonomic comfort over long sessions", "Quiet clicks with good feedback — great for shared workspaces", "Smooth SmartWheel scrolling", "Customizable buttons", "Easy multi-device connectivity", "Stable wireless; straightforward setup"],
+      "cons": [],
+      "quote": "One of my favorite features is the silent clicks. The buttons still provide good feedback but are much quieter than a traditional mouse, which is great for shared workspaces, home offices, or late-night use."
+    },
+    {
+      "id": "amazon-m840l-joe-2026-06-03",
+      "source": "Amazon US — Joe",
+      "url": "https://www.amazon.com/review/R1JEVAJEDZQ9U8",
+      "date": "2026-06-03",
+      "model": "M840L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Coming from a gamer, this quiet mouse won me over.",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Comfort immediately noticeable, great for extended use", "Best-in-class numbered Bluetooth multi-device switching — instant, no disconnect needed", "Up to 3 devices, no dongle", "Up to 24-month battery"],
+      "cons": ["Silent clicks take adjustment for those used to tactile feedback", "Not a gaming mouse"],
+      "quote": "The Bluetooth multi device switching is genuinely one of the better implementations I have used. Clear numbered indicators show exactly which device you are connected to and switching between them is instant. No disconnecting from one device before pairing to another, just tap and go."
+    },
+    {
+      "id": "amazon-m840l-idahoan-2026-05-30",
+      "source": "Amazon US — Idahoan",
+      "url": "https://www.amazon.com/review/R3GKKJB11S7OMX",
+      "date": "2026-05-30",
+      "model": "M840L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Mid-tier mouse with Bluetooth x3 — functional but feels cheap.",
+      "rating": 3,
+      "rating_max": 5,
+      "pros": ["Sufficient buttons, range and multiple Bluetooth connections", "Buttons impressively quiet"],
+      "cons": ["Lacks premium feel — 'feels like totally cheap plastic'", "No rechargeable batteries included"],
+      "quote": "Missing on general premium feel. Pick it up and it just feels like totally cheap plastic. Also disappointed to see them not including rechargeable batteries. Otherwise the mouse function is good and buttons are impressively quiet."
+    },
+    {
+      "id": "amazon-m840l-ghostborg-2026-06-02",
+      "source": "Amazon US — Ghostborg",
+      "url": "https://www.amazon.com/review/R3LK5OF1C4UJW2",
+      "date": "2026-06-02",
+      "model": "M840L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Comfortable, works well, reputable name — but priced a bit high for basic use.",
+      "rating": 4,
+      "rating_max": 5,
+      "pros": ["Comfortable shape/ergonomics; wrist rests easily", "Grippy textured sides", "Programmable side buttons", "Effortless Bluetooth pairing; battery included", "No dongle needed for basic use on Mac OS"],
+      "cons": ["Basic options (side-button page fwd/back) not preset — requires installing Logi Options+", "Right-hand only", "Priced a bit high for basic use"],
+      "quote": "It would have been nice if some of the basic options were already set up - such as the side buttons for page forward/back. I don't want to have to install any software to do this... Priced a bit high for basic use."
+    },
+    {
+      "id": "amazon-m840l-clee-2026-05-30",
+      "source": "Amazon US — C Lee",
+      "url": "https://www.amazon.com/review/R199W1MIEUWX00",
+      "date": "2026-05-30",
+      "model": "M840L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Excellent scroll wheel and multi-device support.",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["SmartWheel is the best mouse wheel the buyer has used — precise when slow, auto-far when fast", "Comfortable right-handed shape", "Two programmable thumb buttons + DPI button", "3-device switching ideal for work/personal", "Quiet clicking that still gives tactile feedback"],
+      "cons": [],
+      "quote": "The standout feature for me is Logitech's SmartWheel... Slow scrolling gives precise control, while fast scrolling automatically moves much farther with less effort. It's the best mouse wheel I've used."
     }
   ],
   "update_log": [
@@ -405,6 +567,13 @@
       "summary": "FIRST REAL BUYER REVIEWS captured via Firecrawl stealth scrape. M850L: 4.6★ from 11 ratings (5 written reviews); M840L: 4.4★ from 14 ratings (3 written reviews). Praise: comfort, genuinely silent clicks, seamless numbered 3-device Bluetooth switching, 24-month battery. Complaints: no USB receiver in the box / Bluetooth-only connectivity blips, M840L too lightweight for some, and at ~$50 some buyers expect rechargeable rather than AA. Buyer sentiment strongly positive overall (avg ≈4.5★). Status moved to post-launch; sentiment score raised to 8.0. JD.com/Taobao Chinese buyer comments remain behind login/anti-bot.",
       "new_reviews": 8,
       "new_media": 0
+    },
+    {
+      "date": "2026-06-12",
+      "sources": ["Amazon US — M850L (B0GSHRCS7L)", "Amazon US — M840L (B0GSJ4YZTN)", "Tom's Guide"],
+      "summary": "9 new Amazon buyer reviews captured via Firecrawl stealth scrape (4 M850L: Rich 5★, donna 5★, R M O 4★, Brand 1★; 5 M840L: Christina 5★, Joe 5★, Idahoan 3★, Ghostborg 4★, C Lee 5★). Updated Amazon scores: M850L now 4.3★ from 17 ratings (down from 4.6/11 as more reviews — incl. the first 1★ — landed); M840L up to 4.5★ from 15 ratings. New positives: SmartWheel praised as 'best mouse wheel I've used', numbered 3-device Bluetooth switching 'one of the better implementations', comfort and quiet clicks. New concerns: first 1★ flags a silent-click regression vs the older M650 ('clicks significantly louder') and calls the cushion 'pointless'; a 4★ confirms Senses.se's finding that the cushion doesn't reach larger palms; M840L 'feels like totally cheap plastic' (3★); side-button page fwd/back not preset without Logi Options+ (4★). 1 new media review: Tom's Guide ('unparalleled comfort for just $49'), reinforcing the no-bundled-receiver complaint. The /product-reviews/ ASIN path remains sign-in-walled (redirects to login); the /dp/ pages were used instead. JD.com SKU-specific buyer comments still blocked by anti-bot (comment API returned '系统繁忙'); no Chinese buyer comments accessible this run.",
+      "new_reviews": 9,
+      "new_media": 1
     }
   ],
   "monitoring_targets": [
