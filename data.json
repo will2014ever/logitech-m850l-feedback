@@ -14,17 +14,17 @@
     }
   },
   "meta": {
-    "last_updated": "2026-06-12",
-    "next_update": "2026-06-19",
+    "last_updated": "2026-06-19",
+    "next_update": "2026-06-26",
     "schedule": "Every Friday",
     "status": "post-launch",
-    "total_reviews": 17,
+    "total_reviews": 18,
     "total_media_sources": 9,
     "overall_sentiment": "positive",
     "sentiment_score": 8.0,
     "amazon_ratings": {
-      "M850L": {"rating": 4.3, "count": 17},
-      "M840L": {"rating": 4.5, "count": 15}
+      "M850L": {"rating": 4.4, "count": 24},
+      "M840L": {"rating": 4.4, "count": 18}
     }
   },
   "specs": {
@@ -53,7 +53,7 @@
   },
   "key_themes": {
     "strengths": [
-      "Verified Amazon buyers rate it well: M850L 4.3★ (17 ratings), M840L 4.5★ (15 ratings)",
+      "Verified Amazon buyers rate it well: M850L 4.4★ (24 ratings), M840L 4.4★ (18 ratings)",
       "Ergonomic comfort for all-day use — repeatedly the #1 praised attribute across buyers",
       "Silent operation — buyers say the quiet clicks are 'blissful' once adjusted",
       "SmartWheel adaptive scroll — one buyer calls it 'the best mouse wheel I've used' (precise slow, fast auto-far)",
@@ -71,14 +71,16 @@
       "Sleep/wake lag — cursor jumps for a split second after ~10s idle while the mouse wakes (Amazon 2★)",
       "Basic functions (side-button page fwd/back) not preset out of box — requires Logi Options+ install (Amazon 4★)",
       "Right-hand only — no left-hand option",
-      "Cushion doesn't reach palm for larger-handed users — Senses.se AND a 4★ buyer confirm the palm rests above the cushion; one calls it 'kinda pointless'"
+      "Cushion doesn't reach palm for larger-handed users — Senses.se AND a 4★ buyer confirm the palm rests above the cushion; one calls it 'kinda pointless'",
+      "Isolated QC/DOA report — one M850L arrived in an opened box and 'would not connect' (Amazon 3★, 2026-06-10)"
     ],
     "open_questions": [
       "Will the silent-click 'regression vs M650' complaint recur as more buyers compare to older silent models?",
       "Palm cushion long-term durability over months of daily use",
       "JD.com / Taobao Chinese buyer comments still behind login / anti-bot — to capture next run",
       "Will the no-USB-receiver complaint grow as more mainstream buyers arrive?",
-      "Chinese user reaction to ¥319 (first-day ¥279) price vs US $49.99 equivalent"
+      "Chinese user reaction to ¥319 (first-day ¥279) price vs US $49.99 equivalent",
+      "Watch whether DOA / 'won't connect on arrival' reports recur as volume grows (one M850L unit so far)"
     ]
   },
   "media_reviews": [
@@ -352,7 +354,7 @@
     },
     {
       "id": "amazon-m850l-customer-2026-06-02",
-      "source": "Amazon US — Amazon Customer",
+      "source": "Amazon US — Eileen Carrasquel",
       "url": "https://www.amazon.com/dp/B0GSHRCS7L",
       "date": "2026-06-02",
       "model": "M850L",
@@ -544,9 +546,31 @@
       "pros": ["SmartWheel is the best mouse wheel the buyer has used — precise when slow, auto-far when fast", "Comfortable right-handed shape", "Two programmable thumb buttons + DPI button", "3-device switching ideal for work/personal", "Quiet clicking that still gives tactile feedback"],
       "cons": [],
       "quote": "The standout feature for me is Logitech's SmartWheel... Slow scrolling gives precise control, while fast scrolling automatically moves much farther with less effort. It's the best mouse wheel I've used."
+    },
+    {
+      "id": "amazon-m850l-donna-doa-2026-06-10",
+      "source": "Amazon US — donna",
+      "url": "https://www.amazon.com/dp/B0GSHRCS7L",
+      "date": "2026-06-10",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Box opened and would not connect.",
+      "rating": 3,
+      "rating_max": 5,
+      "pros": [],
+      "cons": ["Unit arrived in an opened box", "Would not connect out of the box (DOA)"],
+      "quote": "Box opened and it would not connect."
     }
   ],
   "update_log": [
+    {
+      "date": "2026-06-19",
+      "sources": ["Amazon US — M850L (B0GSHRCS7L)", "Amazon US — M840L (B0GSJ4YZTN)", "JD.com", "Reddit", "expreview"],
+      "summary": "Weekly run via Firecrawl stealth scrape of the Amazon /dp/ pages. Amazon rating counts grew but few new written reviews surfaced: M850L now 4.4★ from 24 ratings (up from 4.3★/17, +7 ratings); M840L now 4.4★ from 18 ratings (was 4.5★/15, +3 ratings). 1 genuinely new written review captured — M850L 'donna' 3★ (2026-06-10): unit arrived in an opened box and 'would not connect' (first DOA/QC report; logged as an open question to watch). Also resolved the prior 'Amazon Customer' 2026-06-02 entry to its real author name (Eileen Carrasquel). No new media reviews worth adding (expreview 2026-06-02 was launch-news only, dup of existing IT之家 launch coverage; a YouTube review and a Reddit thread surfaced but could not be extracted — Reddit hard-blocked by the scraper). JD.com still inaccessible: the comment API returned empty under anti-bot and the item page (real SKU 10223723918204) redirected to passport.jd.com login — no Chinese buyer comments this run. The /product-reviews/ ASIN path remains sign-in-walled.",
+      "new_reviews": 1,
+      "new_media": 0
+    },
     {
       "date": "2026-05-28",
       "sources": ["The Register", "MobileSyrup", "GearBrain", "IT之家"],
