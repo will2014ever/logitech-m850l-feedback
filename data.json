@@ -14,17 +14,17 @@
     }
   },
   "meta": {
-    "last_updated": "2026-06-19",
-    "next_update": "2026-06-26",
+    "last_updated": "2026-06-26",
+    "next_update": "2026-07-03",
     "schedule": "Every Friday",
     "status": "post-launch",
-    "total_reviews": 18,
-    "total_media_sources": 9,
+    "total_reviews": 22,
+    "total_media_sources": 10,
     "overall_sentiment": "positive",
     "sentiment_score": 8.0,
     "amazon_ratings": {
-      "M850L": {"rating": 4.4, "count": 24},
-      "M840L": {"rating": 4.4, "count": 18}
+      "M850L": {"rating": 4.2, "count": 30},
+      "M840L": {"rating": 4.5, "count": 22}
     }
   },
   "specs": {
@@ -53,7 +53,7 @@
   },
   "key_themes": {
     "strengths": [
-      "Verified Amazon buyers rate it well: M850L 4.4★ (24 ratings), M840L 4.4★ (18 ratings)",
+      "Verified Amazon buyers rate it well: M850L 4.2★ (30 ratings), M840L 4.5★ (22 ratings)",
       "Ergonomic comfort for all-day use — repeatedly the #1 praised attribute across buyers",
       "Silent operation — buyers say the quiet clicks are 'blissful' once adjusted",
       "SmartWheel adaptive scroll — one buyer calls it 'the best mouse wheel I've used' (precise slow, fast auto-far)",
@@ -67,7 +67,8 @@
       "No USB receiver in the box — Bluetooth-only causes occasional connectivity blips; Logi Bolt sold separately (~$14). Echoed by Amazon buyers AND Tom's Guide",
       "Silent-click regression: a 1★ buyer says the M850L (and MX Master 4) clicks are 'significantly louder' than the older M650 — 'when I'm shopping for silent click, I expect silent click'",
       "At ~$50/$40 some buyers expect a rechargeable mouse, not a AA cell (Amazon 3★/1★)",
-      "M840L build feels cheap/too lightweight for some — 'feels like totally cheap plastic' (Amazon 3★ & 2★)",
+      "M840L build feels cheap/too lightweight for some — 'feels like totally cheap plastic' (Amazon 3★ & 2★); light weight also makes it easy to bump out of position (Amazon 3★)",
+      "M840L Bluetooth drops on Linux — a 3★ buyer's M840L 'doesn't stay connected for long' on a Linux laptop (suspected aggressive sleep), needing a manual wake; same buyer dislikes the changed button layout (sub-wheel button switches DPI instead of acting as middle-click/scroll-mode toggle)",
       "Sleep/wake lag — cursor jumps for a split second after ~10s idle while the mouse wakes (Amazon 2★)",
       "Basic functions (side-button page fwd/back) not preset out of box — requires Logi Options+ install (Amazon 4★)",
       "Right-hand only — no left-hand option",
@@ -289,6 +290,31 @@
         "No 2.4GHz / Logi Bolt receiver in the box — must buy separately (~$14)"
       ],
       "quote": "For office workers on a budget, the M850L delivers unparalleled comfort for just $49 — thanks to its built-in cushioned palm rest, contoured shape and 24 months of battery life."
+    },
+    {
+      "id": "rootnation-2026-06-12",
+      "source": "Root-Nation (Victor Surkov)",
+      "url": "https://zh-cn.root-nation.com/en/pc-en/pc-accessories-en/en-logitech-signature-comfort-plus-m850-l-review/",
+      "date": "2026-06-12",
+      "model": "M850L",
+      "type": "media",
+      "region": "global",
+      "verdict": "A strong all-rounder for work, study and daily use — especially for people who switch between multiple devices.",
+      "rating": 9.8,
+      "rating_max": 10,
+      "pros": [
+        "Ergonomic design",
+        "All-day comfort",
+        "Silent operation",
+        "Long battery life",
+        "Multi-device connectivity"
+      ],
+      "cons": [
+        "Relatively heavy",
+        "Not suited to competitive gaming",
+        "No advanced sensor configuration options"
+      ],
+      "quote": "If you're looking for a versatile mouse for work, study or daily use — especially if you frequently switch between several devices — the Logitech M850 L looks like a great option."
     }
   ],
   "user_reviews": [
@@ -549,7 +575,7 @@
     },
     {
       "id": "amazon-m850l-donna-doa-2026-06-10",
-      "source": "Amazon US — donna",
+      "source": "Amazon US — sarah",
       "url": "https://www.amazon.com/dp/B0GSHRCS7L",
       "date": "2026-06-10",
       "model": "M850L",
@@ -561,9 +587,76 @@
       "pros": [],
       "cons": ["Unit arrived in an opened box", "Would not connect out of the box (DOA)"],
       "quote": "Box opened and it would not connect."
+    },
+    {
+      "id": "amazon-m850l-norm-2026-06-20",
+      "source": "Amazon US — Norm",
+      "url": "https://www.amazon.com/dp/B0GSHRCS7L",
+      "date": "2026-06-20",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Easy connection, quiet operation.",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Very easy to pair", "Ergonomically perfect", "Quiet operation"],
+      "cons": [],
+      "quote": "This mouse was very easy to pair to my computer and it was ergonomically perfect. Love it."
+    },
+    {
+      "id": "amazon-m850l-kent-2026-06-12",
+      "source": "Amazon US — kent",
+      "url": "https://www.amazon.com/dp/B0GSHRCS7L",
+      "date": "2026-06-12",
+      "model": "M850L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Must have!",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Very comfortable", "Great for office use"],
+      "cons": [],
+      "quote": "Very comfortable mouse I've used! Great for office use!"
+    },
+    {
+      "id": "amazon-m840l-trigger-2026-06-10",
+      "source": "Amazon US — Trigger",
+      "url": "https://www.amazon.com/dp/B0GSJ4YZTN",
+      "date": "2026-06-10",
+      "model": "M840L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Logitech has made better — average, light, drops connection on Linux.",
+      "rating": 3,
+      "rating_max": 5,
+      "pros": ["Pairs easily with a Windows laptop", "Smooth-operating scroll wheel"],
+      "cons": ["Very light — feels a bit cheap and is easy to bump out of position", "Won't stay connected for long on a Linux laptop (suspected power-saving) — has to be re-woken from Bluetooth settings", "Button layout changed vs older Logitech mice — the button below the wheel switches DPI instead of being a middle-click / scroll-mode toggle", "Uses disposable AA rather than rechargeable"],
+      "quote": "It just didn't have a whole lot of heft to it which makes it feel a bit cheap... When I connected it to my Linux laptop is when I started to have problems. It doesn't seem to stay connected for long periods of time."
+    },
+    {
+      "id": "amazon-m840l-anothergreat-2026-06-03",
+      "source": "Amazon US — Amazon Customer",
+      "url": "https://www.amazon.com/dp/B0GSJ4YZTN",
+      "date": "2026-06-03",
+      "model": "M840L",
+      "type": "user",
+      "region": "us",
+      "verdict": "Another great Logitech mouse.",
+      "rating": 5,
+      "rating_max": 5,
+      "pros": ["Fits the hand very well", "Buttons have a soft, smooth feel and are logically placed", "Great scrolling wheel", "Pairs easily and quickly (used with an Android tablet)", "Bottom device-switch button makes moving between tablet and computer easy"],
+      "cons": [],
+      "quote": "Amazing mouse but I would expect nothing less from Logitech. It fits my hand very well, the buttons have a soft smooth feel... The button on the bottom to switch devices is awesome."
     }
   ],
   "update_log": [
+    {
+      "date": "2026-06-26",
+      "sources": ["Amazon US — M850L (B0GSHRCS7L)", "Amazon US — M840L (B0GSJ4YZTN)", "Root-Nation", "PCMag", "JD.com"],
+      "summary": "Weekly run via Firecrawl stealth scrape of the Amazon /dp/ pages. Rating counts grew again: M850L now 4.2★ from 30 ratings (down from 4.4★/24 as more mixed reviews landed); M840L up to 4.5★ from 22 ratings (was 4.4★/18). 4 genuinely new written buyer reviews captured — M850L: Norm 5★ (2026-06-20) easy pairing/ergonomic, kent 5★ (2026-06-12) 'must have' for office use; M840L: Trigger 3★ (2026-06-10) — light/cheap feel, won't stay connected on a Linux laptop, and dislikes the changed button layout (sub-wheel button switches DPI instead of middle-click), plus 'Another great Logitech mouse' 5★ (2026-06-03) praising fit, soft buttons, scroll wheel and the bottom device-switch button. Also corrected the 2026-06-10 DOA 'won't connect' review's author from 'donna' to its real name 'sarah'. 1 new media review: Root-Nation (Victor Surkov, 9.8/10, 2026-06-12) — versatile all-rounder, strong on comfort/silence/battery/multi-device, cons relatively heavy & no advanced sensor options. PCMag also published a hands-on M850L review but Firecrawl does not support pcmag.com (could not extract — logged, not fabricated). The /product-reviews/ sortBy=recent ASIN path again redirected to passport/sign-in (0 reviews) — the /dp/ pages were used instead. JD.com still inaccessible: the comment API (productId 10223723918204) returned an empty comment list under anti-bot — no Chinese buyer comments this run.",
+      "new_reviews": 4,
+      "new_media": 1
+    },
     {
       "date": "2026-06-19",
       "sources": ["Amazon US — M850L (B0GSHRCS7L)", "Amazon US — M840L (B0GSJ4YZTN)", "JD.com", "Reddit", "expreview"],
